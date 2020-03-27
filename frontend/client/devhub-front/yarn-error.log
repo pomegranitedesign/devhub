@@ -1,0 +1,40 @@
+Arguments: 
+  /snap/node/2559/bin/node /snap/node/2559/bin/yarn.js config get registry
+
+PATH: 
+  NODEJS_HOME:/home/got_hacked/Programs/MongoDBShell/mongodb-linux-x86_64-ubuntu1804-4.2.1/bin:/home/got_hacked/Programs/MongoDB/mongodb/bin:/snap/bin:/home/got_hacked/.npm-global/bin:/snap/bin/node:/home/got_hacked/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/wine-stable/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  13.2.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, write
+      at writeSync (fs.js:597:3)
+      at SyncWriteStream._write (internal/fs/sync_write_stream.js:22:3)
+      at doWrite (_stream_writable.js:453:12)
+      at writeOrBuffer (_stream_writable.js:435:5)
+      at SyncWriteStream.Writable.write (_stream_writable.js:315:11)
+      at ConsoleReporter._log (/snap/node/2559/lib/cli.js:96624:17)
+      at ConsoleReporter.log (/snap/node/2559/lib/cli.js:96612:10)
+      at get (/snap/node/2559/lib/cli.js:87474:14)
+      at Object.<anonymous> (/snap/node/2559/lib/cli.js:25940:25)
+      at Generator.next (<anonymous>)
+
+npm manifest: 
+  {
+    "name": "devhub-front",
+    "version": "0.1.0",
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

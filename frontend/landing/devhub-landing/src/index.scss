@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Ubuntu:300,400,500,700&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+// Base classes
+@media screen and (max-width: 798px) {
+  .mobile-invisible {
+    display: none;
+  }
+}
