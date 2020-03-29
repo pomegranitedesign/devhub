@@ -13,7 +13,7 @@ const ContactUs = (props) => {
       <Container>
         <ContactForm>
           <Row style={{ display: 'flex', alignItems: 'center' }}>
-            <Col md={6}>
+            <Col md={6} lg={6} sm={12}>
               <Input type="text" placeholder="Name" required />
               <Input type="email" placeholder="Email" required />
               <Input type="text" placeholder="Company" />
@@ -45,6 +45,7 @@ const Title = styled.h1`
   font-weight: ${(props) => props.theme.titleWeight};
 `
 const ContactForm = styled.form``
+
 const Input = styled.input`
   display: block;
   margin-bottom: 55px;
@@ -59,6 +60,10 @@ const Input = styled.input`
 
   &::placeholder {
     color: #b9b9b9;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
   }
 `
 const Message = styled.textarea`

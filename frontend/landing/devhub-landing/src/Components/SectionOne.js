@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 import img from '../Assets/Images/sectionOneImage.svg'
 
-const SectionOne = (props) => {
+const SectionOne = () => {
   return (
     <Wrapper>
       <Container>
