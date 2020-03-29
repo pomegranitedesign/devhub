@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { withTheme } from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-
 import { Link } from 'react-router-dom'
+import Typed from 'react-typed'
 
 import img from '../Assets/Images/sectionOneImage.svg'
 
@@ -22,7 +22,15 @@ const SectionOne = () => {
                 <Title>DevHub</Title>
                 <Subtitle>A Blog For Developers</Subtitle>
               </Text>
-              <Meet>Meet</Meet>
+
+              <Meet>
+                <Typed
+                  loop
+                  strings={['Meet', 'Share', 'Read']}
+                  typeSpeed={120}
+                  backSpeed={80}
+                />
+              </Meet>
             </Heading>
 
             <Navigation>
@@ -31,8 +39,8 @@ const SectionOne = () => {
             </Navigation>
           </Col>
 
-          <Col md={6} className='mobile-invisible'>
-            <img src={img} alt='Section One' />
+          <Col md={6} className="mobile-invisible">
+            <img src={img} alt="Section One" />
           </Col>
         </Row>
       </Container>
@@ -63,19 +71,47 @@ const Heading = styled.div`
     max-width: 470px;
   }
 `
+
 const Text = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: 30px;
   }
 `
+
 const Title = styled.h1`
   font-size: ${(props) => props.theme.titleSize};
   font-weight: ${(props) => props.theme.titleWeight};
+  animation: fadeInAnimation 600ms 1000ms cubic-bezier(0.075, 0.82, 0.165, 1)
+    both;
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 `
+
 const Subtitle = styled.h3`
   font-size: ${(props) => props.theme.subtitleSize};
   font-weight: ${(props) => props.theme.subtitleWeight};
+  animation: fadeInAnimation 1200ms 1000ms cubic-bezier(0.075, 0.82, 0.165, 1)
+    both;
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 `
+
 const Meet = styled.h1`
   font-size: 200px;
   font-weight: 100;
@@ -89,6 +125,7 @@ const Meet = styled.h1`
     font-size: 150px;
   }
 `
+
 const Navigation = styled.nav`
   font-family: 'Ubuntu', sans-serif;
   display: flex;
@@ -99,6 +136,7 @@ const Navigation = styled.nav`
     margin-top: 30px;
   }
 `
+
 const NavItem = styled(Link)`
   color: ${({ isLogin }) => (isLogin ? '#0D1321' : '#748CAB')};
   text-decoration: none;
