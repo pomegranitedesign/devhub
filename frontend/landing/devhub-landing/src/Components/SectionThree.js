@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { withTheme } from 'styled-components'
 
 import img from '../Assets/Images/sectionThreeImage.svg'
 import videoPlaceholder from '../Assets/Images/videoPlaceholder.jpg'
@@ -16,7 +15,7 @@ const SectionThree = (props) => {
           </Col>
 
           <StyledCol>
-            <Image src={img} alt="Section Three" />
+            <Image src={img} alt='Section Three' />
           </StyledCol>
         </Row>
 
@@ -24,7 +23,7 @@ const SectionThree = (props) => {
           <Col>
             <Image
               src={videoPlaceholder}
-              alt="Video placeholder"
+              alt='Video placeholder'
               style={{ width: '80%', margin: '20px auto', display: 'block' }}
             />
           </Col>

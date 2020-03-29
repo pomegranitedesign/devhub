@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { withTheme } from 'styled-components'
 
 import SectionOne from './SectionOne'
@@ -11,18 +10,15 @@ import Footer from './Footer'
 
 const Landing = () => {
   return (
-    <Wrapper>
+    <>
       <SectionOne />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
       <ContactUs />
       <Footer />
-    </Wrapper>
+    </>
   )
 }
-
-// Styled components
-const Wrapper = styled.main``
 
 export default withTheme(Landing)

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { withTheme } from 'styled-components'
 
 const ContactUs = (props) => {
   const [name, setName] = useState('') // eslint-disable-line
@@ -14,19 +13,19 @@ const ContactUs = (props) => {
         <ContactForm>
           <Row style={{ display: 'flex', alignItems: 'center' }}>
             <Col md={6} lg={6} sm={12}>
-              <Input type="text" placeholder="Name" required />
-              <Input type="email" placeholder="Email" required />
-              <Input type="text" placeholder="Company" />
+              <Input type='text' placeholder='Name' required />
+              <Input type='email' placeholder='Email' required />
+              <Input type='text' placeholder='Company' />
             </Col>
 
-            <Col md={6} className="mobile-invisible">
+            <Col md={6} className='mobile-invisible'>
               <Title>Contact DevHub</Title>
             </Col>
           </Row>
 
           <Row>
             <Col>
-              <Message placeholder="Message" />
+              <Message placeholder='Message' />
             </Col>
           </Row>
         </ContactForm>

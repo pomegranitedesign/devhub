@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { withTheme } from 'styled-components'
+
 import { Link } from 'react-router-dom'
 
 import img from '../Assets/Images/sectionOneImage.svg'
@@ -31,8 +31,8 @@ const SectionOne = () => {
             </Navigation>
           </Col>
 
-          <Col md={6} className="mobile-invisible">
-            <img src={img} alt="Section One" />
+          <Col md={6} className='mobile-invisible'>
+            <img src={img} alt='Section One' />
           </Col>
         </Row>
       </Container>

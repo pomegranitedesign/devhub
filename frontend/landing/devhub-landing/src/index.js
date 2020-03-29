@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components'
 import { Landing } from './Components/index'
 import { _globalTheme } from './_globalTheme'
 import './index.scss'
-import * as serviceWorker from './serviceWorker'
 
 render(
   <ThemeProvider theme={_globalTheme}>
@@ -16,4 +15,3 @@ render(
   </ThemeProvider>,
   document.getElementById('root')
 )
-serviceWorker.unregister()

@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { withTheme } from 'styled-components'
 
 import img from '../Assets/Images/sectionTwoImage.svg'
 
@@ -16,8 +15,8 @@ const SectionOne = (props) => {
             justifyContent: 'center'
           }}
         >
-          <Col className="mobile-invisible">
-            <img src={img} alt="Section two" />
+          <Col className='mobile-invisible'>
+            <img src={img} alt='Section two' />
           </Col>
 
           <Col>

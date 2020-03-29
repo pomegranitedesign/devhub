@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import { withTheme } from 'styled-components'
+import uuid from 'uuid/v4'
 
 import react from '../Assets/Images/react.svg'
 import aws from '../Assets/Images/aws.svg'
@@ -23,8 +23,7 @@ const images = [
   docker
 ]
 
-// TODO: Remove the mobile-invisible class from Wrapper
-const SectionThree = (props) => {
+const SectionThree = () => {
   return (
     <Wrapper>
       <Container>
@@ -37,7 +36,7 @@ const SectionThree = (props) => {
         <Row>
           <Grid>
             {images.map((image) => (
-              <GridItem src={image} alt="Image" />
+              <GridItem src={image} alt='Image' key={uuid()} />
             ))}
           </Grid>
         </Row>
